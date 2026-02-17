@@ -6,7 +6,9 @@ Advanced Git & DevOps Team Collaboration Assignment
 ## Group Members
 
 Seshan Sandeepa – itbin-2312-0024 – DevOps Engineer / Release Manager / Frontend Developer
+
 Wathsala Kithulgala – itbin-2312-0025 – Backend Developer
+
 Lishani Samarakoon – itbin-2312-0005 – Frontend Developer (Application & Payment Module)
 
 ## Project Overview
