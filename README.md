@@ -17,7 +17,7 @@ The main goal of this system is to allow passengers to apply for season tickets 
 
 This project was developed as part of the Advanced Git & DevOps Team Collaboration Assignment. The objective of the assignment was not only to build a functional web application, but also to demonstrate proper teamwork using Git, feature branches, pull requests, CI pipelines, and cloud deployment.
 
-## Live Deployment
+## Live Deployment 
 
 The application is deployed on Vercel and connected to the main branch.
 
