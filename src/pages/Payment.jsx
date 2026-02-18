@@ -1,15 +1,8 @@
 
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 import "./Payment.css";
 
 export default function Payment() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
- 
-  const formData = location.state?.formData;
-
   return (
     <div className="payPage">
       <div className="payCard">
