@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main", "member1", "member2", "member3", "feature/*"]
   pull_request:
+    branches: ["main"]
 
 jobs:
   build:
@@ -21,10 +22,17 @@ jobs:
       - name: Install frontend
         run: npm ci
 
+      - name: Lint frontend
+        run: npm run lint
+
       - name: Build frontend
-        run: npm run build --if-present
+        run: npm run build
 
       # BACKEND (server folder)
       - name: Install backend
         working-directory: server
         run: npm ci
+
+      - name: Build backend
+        working-directory: server
+        run: npm test --if-present
