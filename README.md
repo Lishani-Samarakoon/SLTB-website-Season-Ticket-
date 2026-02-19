@@ -144,7 +144,7 @@ This structure keeps the frontend and backend clearly separated and easier to ma
    npm start
 
 Frontend will run on:
-[http://localhost:5173](http://localhost:5173)
+[http://localhost:5173](http://localhost:5173/)
 
 Backend will run on:
 [http://localhost:5000](http://localhost:5000)
