@@ -22,7 +22,7 @@ jobs:
 
       # FRONTEND (root)
       - name: Install frontend dependencies
-        run: npm install --legacy-peer-deps --no-audit 2>&1 || npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps --no-audit || npm install --legacy-peer-deps --no-audit
 
       - name: Run linter
         run: npm run lint 2>&1 || true
@@ -33,7 +33,7 @@ jobs:
       # BACKEND (server folder)
       - name: Install backend dependencies
         working-directory: server
-        run: npm install --legacy-peer-deps --no-audit 2>&1 || npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps --no-audit || npm install --legacy-peer-deps --no-audit
 
       - name: Test backend (optional)
         working-directory: server
