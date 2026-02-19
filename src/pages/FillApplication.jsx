@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./FillApplication.css";
+import { submitApplication } from "../utils/api";
 
 export default function FillApplication() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ export default function FillApplication() {
   });
 
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -26,7 +28,7 @@ export default function FillApplication() {
     setError("");
   }
 
-  function handleNext(e) {
+  async function handleNext(e) {
     e.preventDefault();
 
   
@@ -48,9 +50,16 @@ export default function FillApplication() {
       return;
     }
 
-    
-   
-    navigate("/payment");
+    setLoading(true);
+    try {
+      await submitApplication(form);
+      navigate("/payment");
+    } catch (err) {
+      setError("Failed to submit application. Please try again.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -174,8 +183,8 @@ export default function FillApplication() {
             </div>
           </div>
 
-          <button type="submit" className="nextBtn">
-            Next
+          <button type="submit" className="nextBtn" disabled={loading}>
+            {loading ? "Submitting..." : "Next"}
           </button>
         </form>
       </div>
