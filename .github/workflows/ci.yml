@@ -32,9 +32,7 @@ jobs:
 
       # BACKEND (server folder)
       - name: Install backend dependencies
-        working-directory: server
-        run: npm ci --legacy-peer-deps --no-audit || npm install --legacy-peer-deps --no-audit
+        run: cd server && npm ci --legacy-peer-deps --no-audit || npm install --legacy-peer-deps --no-audit
 
       - name: Test backend (optional)
-        working-directory: server
-        run: npm test --if-present 2>&1 || true
+        run: cd server && npm test --if-present 2>&1 || true
