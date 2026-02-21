@@ -1,0 +1,90 @@
+/* Ticket View page styles */
+.ticketViewPage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.ticketViewCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.backBtn {
+  background: #e0e0e0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.backBtn:hover {
+  background: #d0d0d0;
+}
+
+.ticketViewTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.ticketDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailItem label {
+  font-weight: 500;
+  color: #667eea;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.detailItem p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.status.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.expired {
+  background: #ffebee;
+  color: #c62828;
+}
+
+@media (max-width: 600px) {
+  .ticketDetails {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

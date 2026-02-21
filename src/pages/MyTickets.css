@@ -1,0 +1,98 @@
+/* My Tickets page styles */
+.ticketsPage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.ticketsCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ticketsTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ticketsSub {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.ticketsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ticketItem {
+  display: block;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.ticketItem:hover {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.ticketHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ticketHeader h3 {
+  margin: 0;
+  color: #333;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.expired {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.ticketRoute {
+  margin: 5px 0;
+  color: #666;
+  font-weight: 500;
+}
+
+.ticketDates {
+  margin: 5px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.noTickets {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+}
