@@ -1,7 +1,3 @@
-import ticketIcon from "../assets/ticket.png";
-
-import uploadPhotoImg from "../assets/upload-photo.png";
-import fillApplicationIcon from "../assets/fill-application.png";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import busImg from "../assets/bus1.png";
