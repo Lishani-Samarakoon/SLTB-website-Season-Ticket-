@@ -5,9 +5,9 @@ Advanced Git & DevOps Team Collaboration Assignment
 
 ## Group Members
 
-Seshan Sandeepa – itbin-2312-0024 – DevOps Engineer / Release Manager / Frontend Developer
-Wathsala Kithulgala – itbin-2312-0025 – Backend Developer
-Lishani Samarakoon – itbin-2312-0005 – Frontend Developer (Application & Payment Module)
+Seshan Sandeepa – itbin-2312-0024 – DevOps Engineer / Release Manager / Frontend Developer,
+Wathsala Kithulgala – itbin-2312-0025 – Backend Developer,
+Lishani Samarakoon – itbin-2312-0005 – Frontend Developer (Application & Payment Module).
 
 ## Project Overview
 
@@ -144,7 +144,7 @@ This structure keeps the frontend and backend clearly separated and easier to ma
    npm start
 
 Frontend will run on:
-[http://localhost:5173](http://localhost:5173)
+[http://localhost:5173](http://localhost:5173/)
 
 Backend will run on:
 [http://localhost:5000](http://localhost:5000)
