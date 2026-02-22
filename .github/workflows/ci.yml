@@ -2,41 +2,37 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ main, develop, "feature/*" ]
+    branches: ["main", "member1", "member2", "member3", "feature/*"]
   pull_request:
-    branches: [ main, develop ]
+    branches: ["main"]
 
 jobs:
-  frontend:
-    name: Frontend Build
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 18
+          cache: 'npm'
 
-      - name: Install frontend deps
-        run: npm install
+      # FRONTEND (root)
+      - name: Install frontend dependencies
+        run: npm ci --legacy-peer-deps --no-audit || npm install --legacy-peer-deps --no-audit
+
+      - name: Run linter
+        run: npm run lint 2>&1 || true
 
       - name: Build frontend
         run: npm run build
 
-  backend:
-    name: Backend Install Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # BACKEND (server folder)
+      - name: Install backend dependencies
+        run: cd server && npm ci --legacy-peer-deps --no-audit || npm install --legacy-peer-deps --no-audit
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-
-      - name: Install backend deps
-        working-directory: server
-        run: npm install
+      - name: Test backend (optional)
+        run: cd server && npm test --if-present 2>&1 || true
