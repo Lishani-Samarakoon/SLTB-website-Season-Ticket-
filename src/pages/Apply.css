@@ -1,0 +1,67 @@
+/* Apply page styles */
+.applyPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.applyCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.applyTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.applySub {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.applyOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.applyOption {
+  display: block;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.applyOption:hover {
+  border-color: #667eea;
+  background: #f5f7ff;
+}
+
+.applyOption h3 {
+  margin: 0 0 10px 0;
+  color: #667eea;
+}
+
+.applyOption p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .applyOptions {
+    grid-template-columns: 1fr;
+  }
+}
