@@ -20,7 +20,7 @@ export default function Payment() {
         <label className="payLabel">Card Number</label>
         <input className="payInput" type="text" placeholder="1234 5678 9012 3456" />
 
-        <div className="payGrid2">
+        <div className="grid2">
           <div>
             <label className="payLabel">Expiry Date</label>
             <input className="payInput" type="text" placeholder="MM/YY" />
