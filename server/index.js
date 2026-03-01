@@ -4,14 +4,13 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Backend server running on port ${PORT}`);
-});
+
 // Middleware
 app.use(cors({
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true
 }));
+
 app.use(express.json());
 
 // Request logging middleware (development)
@@ -21,6 +20,11 @@ if (process.env.NODE_ENV !== 'production') {
     next();
   });
 }
+
+// ✅ Root route (THIS FIXES YOUR MAIN LINK)
+app.get("/", (req, res) => {
+  res.status(200).send("Backend is running ✅");
+});
 
 // Health check endpoint
 app.get("/health", (req, res) => {
@@ -35,14 +39,10 @@ app.get("/health", (req, res) => {
 app.post("/apply", (req, res) => {
   console.log("Received application:", req.body);
 
-  // TODO: Add validation
-  // TODO: Connect to MongoDB/database
-  // TODO: Save application data
-  
   res.json({
     message: "Application received successfully",
     data: req.body,
-    applicationId: `APP_${Date.now()}`, // Temporary ID
+    applicationId: `APP_${Date.now()}`,
     status: "pending_review"
   });
 });
@@ -64,7 +64,7 @@ app.use((req, res) => {
   });
 });
 
-// Start server
+// Start server (ONLY ONCE)
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Backend server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
