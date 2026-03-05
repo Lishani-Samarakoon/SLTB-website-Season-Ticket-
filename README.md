@@ -36,11 +36,9 @@ https://websiteseasonticket.vercel.app/
 - Cloud deployment  
 - Docker containerization  
 
-Whenever changes are pushed to the main branch and pass the CI checks, the updated version is automatically deployed.
----
 
 ## Main Features
-## Live Deployment
+ Live Deployment
 
 ### User Features
 ### Frontend (Production – Vercel)
@@ -51,7 +49,7 @@ Whenever changes are pushed to the main branch and pass the CI checks, the updat
 * Simulated payment process
 * QR-based ticket generation (demo)
 * View submitted ticket details
-https://sltb-website-season-ticket-rey8y4cew-lishanis-projects.vercel.app  
+https://websiteseasonticket.vercel.app/ 
 
 ### Admin Features
 The frontend is automatically deployed from the `main` branch using Vercel.
@@ -140,13 +138,21 @@ Each member worked on a separate feature branch:
 * feature/member2 – Authentication and application-related pages
 * feature/member3 – Backend APIs and database integration
 ##  Project Structure
+
 ├── client/ # React frontend
+
 ├── server/ # Node.js backend
+
 ├── Dockerfile # Frontend Dockerfile
+
 ├── server/Dockerfile # Backend Dockerfile
+
 ├── docker-compose.yml # Service orchestration
+
 ├── .dockerignore
+
 ├── .github/workflows/ # CI configuration
+
 └── README.md
 
 All development was done in feature branches. After completing and testing features, changes were merged into the main branch using pull requests.
