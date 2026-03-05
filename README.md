@@ -28,7 +28,7 @@ The application is deployed on Vercel and connected to the main branch.
 This project demonstrates:
 
 Live URL:
-[https://sltb-website-season-ticket-rey8y4cew-lishanis-projects.vercel.app](https://sltb-website-season-ticket-rey8y4cew-lishanis-projects.vercel.app)
+https://websiteseasonticket.vercel.app/
 - Team collaboration using Git  
 - Feature branch workflow  
 - Pull request review process  
