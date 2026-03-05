@@ -1,26 +1,14 @@
-# SLTB Season Ticket Web Application
-# SLTB Season Ticket Management System  
+# SLTB Season Ticket Web Application 
 ## Advanced Git & DevOps Team Collaboration Assignment  
-
-Advanced Git & DevOps Team Collaboration Assignment
 ---
-
-##  Group Members
 
 ## Group Members
 - **Seshan Sandeepa** – itbin-2312-0024 – DevOps Engineer / Release Manager / Frontend Developer  
 - **Wathsala Kithulgala** – itbin-2312-0025 – Backend Developer  
 - **Lishani Samarakoon** – itbin-2312-0005 – Frontend Developer (Application & Payment Module)  
 
-Seshan Sandeepa – itbin-2312-0024 – DevOps Engineer / Release Manager / Frontend Developer,
-Wathsala Kithulgala – itbin-2312-0025 – Backend Developer,
-Lishani Samarakoon – itbin-2312-0005 – Frontend Developer (Application & Payment Module).
----
-
-## Project Overview
 ##  Project Overview
 
-The SLTB Season Ticket Management System is a full-stack web application created for the Sri Lanka Transport Board (SLTB).
 The SLTB Season Ticket Management System is a full-stack web application developed for the Sri Lanka Transport Board (SLTB).  
 
 The main goal of this system is to allow passengers to apply for season tickets online instead of going to physical counters. By using this system, users can register, log in, submit their application, upload necessary documents, complete a simulated payment process, and receive a generated ticket.
