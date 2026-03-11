@@ -23,7 +23,7 @@ jobs:
 
       - name: Build project
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://sltb-backend.vercel.app' }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
         run: npm run build
 
   deploy:
@@ -42,4 +42,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
-          env: VITE_API_URL=${{ secrets.VITE_API_URL || 'https://sltb-backend.vercel.app' }}
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
